@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="product-info" style="display:flex; gap:40px; padding:40px; align-items:flex-start;">
+
+  <!-- Left: Product Image -->
+  <div class="item-image-parent" style="flex:1;">
+    <div class="item-image-main" style="border:1px solid #ddd; padding:10px; border-radius:10px; text-align:center;">
+      <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width:100%; height:auto; border-radius:10px;" />
+    </div>
+  </div>
+
+  <!-- Right: Product Info -->
+  <div class="item-info-parent" style="flex:1;">
+    <div class="main-info">
+      <h2>{{ product.name }}</h2>
+      <div class="star-rating" style="color:gold; font-size:18px; margin:5px 0;">
+        ★★★★☆
+      </div>
+      <p style="font-size:18px; font-weight:bold; margin:10px 0;">
+        Price: <span id="price">৳ {{ product.price }}</span>
+      </p>
+      <p style="font-size:16px; color:#666;">Unit: {{ product.unit }}</p>
+    </div>
+
+    <!-- Description -->
+    <div class="description" style="margin-top:20px;">
+      <h4>Product Details</h4>
+      <p>{{ product.details }}</p>
+    </div>
+
+    <!-- Buy Button -->
+    <a href="{% url 'add_to_cart' product.pk %}">
+  <button style="background:#28a745; color:#fff; padding:12px 20px; border:none; border-radius:8px; cursor:pointer;">
+    🛒 Add to Cart
+  </button>
+</a>
+
+  </div>
+</section>
+{% endblock content %}

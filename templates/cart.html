@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Your Cart</h2>
+    {% if cart %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, item in cart.items %}
+                <tr>
+                    <td>
+                        {% if item.image %}
+                            <img src="{{ item.image }}" style="height:50px;">
+                        {% endif %}
+                    </td>
+                    <td>{{ item.name }}</td>
+                    <td>৳ {{ item.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>৳ {{ item.line_total|floatformat:2 }}</td>
+                    <td>
+                        <a href="{% url 'remove_from_cart' key %}" class="btn btn-danger btn-sm">X</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h4>Total: ৳ {{ total }}</h4>
+
+        <!-- ✅ Checkout Button -->
+        <div class="mt-4">
+            <a href="{% url 'checkout' %}" class="btn btn-success btn-lg">Proceed to Checkout</a>
+        </div>
+
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+</div>
+{% endblock %}

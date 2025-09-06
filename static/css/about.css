@@ -1,0 +1,15 @@
+.list-style-one {
+    list-style-type: disc; /* default bullet */
+    padding-left: 20px;    /* spacing from left */
+}
+
+.list-style-one li {
+    color: green;           /* text color */
+    position: relative;
+    margin-bottom: 8px;
+}
+
+/* Make the bullet itself green */
+.list-style-one li::marker {
+    color: green;  /* bullet color */
+}

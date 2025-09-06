@@ -1,0 +1,55 @@
+{% load static %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="{% static 'images/green-field.jpg' %}" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="Organic Products">
+      <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px;">
+        <h5>100% organic products</h5>
+        <p>Naturally grown for your health.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="{% static 'images/Fresh_food.jpg' %}" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="Fresh Selection">
+      <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px;">
+        <h5>Fresh and carefully selected</h5>
+        <p>Always the best quality.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="{% static 'images/family.jpg' %}" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="Happy Customers">
+      <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px;">
+        <h5>500+ happy customers</h5>
+        <p>Trusted for daily essentials.</p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <img src="{% static 'images/price.jpg' %}" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="Affordable Prices">
+      <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: 8px;">
+        <h5>Affordable Prices</h5>
+        <p>Without compromising quality.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Bootstrap JS (needed for carousel controls) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

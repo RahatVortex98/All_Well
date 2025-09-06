@@ -1,0 +1,114 @@
+/* General image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section spacing */
+section {
+    padding: 60px 0;
+}
+
+/* Remove default list styling */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Contact area border */
+.contact-area {
+    border-bottom: 1px solid #353C46;
+    text-align: center;
+}
+
+/* Contact content paragraph */
+.contact-content p {
+    font-size: 15px;
+    margin: 30px 0 40px; /* reduced bottom margin */
+    position: relative;
+}
+
+/* Decorative line under paragraph */
+.contact-content p::after {
+    background: #353C46;
+    bottom: -20px;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+/* Address / phone text */
+.contact-content h6 {
+    color: #8b9199;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Span styling for separators */
+.contact-content span {
+    color: #353c47;
+    margin: 0 10px;
+}
+
+/* Social links container */
+.contact-social {
+    margin-top: 30px;
+}
+
+/* Horizontal layout for social links */
+.contact-social > ul {
+    display: inline-flex;
+    gap: 15px; /* spacing between links */
+    justify-content: center;
+}
+
+/* Social link styling */
+.contact-social ul li a {
+    border: 1px solid #8b9199;
+    color: #8b9199;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 40px;
+    padding: 0 10px;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.contact-social ul li a:hover {
+    border: 1px solid #FAB702;
+    color: #FAB702;
+}
+
+/* Logo in contact section */
+.contact-content img {
+    max-width: 210px;
+    margin-bottom: 20px;
+}
+
+/* Section and footer background and text */
+section, footer {
+    background: #1A1E25;
+    color: #868c96;
+}
+
+/* Footer styling */
+footer p {
+    padding: 40px 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* Footer images (if any) */
+footer img {
+    width: 44px;
+}

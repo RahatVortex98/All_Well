@@ -1,0 +1,14 @@
+
+  /* Carousel container and inner items take full height */
+  #carouselExampleControls,
+  .carousel-inner,
+  .carousel-item {
+    height: 100vh; /* full screen height */
+  }
+
+  /* Make images cover the entire container */
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* scales image nicely without distortion */
+  }

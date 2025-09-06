@@ -1,0 +1,24 @@
+<!-- Products Section -->
+<section id="products" class="container mt-5">
+    <h2 class='text-center'>Our Products</h2>
+	<br>
+    <div class="row">
+        {% for item in products %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.details }}</p>
+                        <p><strong>Price:</strong> {{ item.price }}  BDT/ {{ item.unit }}</p>
+                        <a href="{% url 'product' item.pk %}">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No products available yet.</p>
+        {% endfor %}
+    </div>
+</section>
